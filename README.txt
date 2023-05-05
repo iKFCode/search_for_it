@@ -7,9 +7,9 @@ This is a Python function that performs a naive search to find a target value in
 Usage
 -----
 The function can be used by calling it and passing in two arguments:
-  naive_search(lst, target)
+  naive_search(list, target)
 where:
-  - lst: the list to search in
+  - list: the list to search in
   - target: the target value to find in the list
 The function returns the index of the target value in the list if it is found, or -1 if it is not found.
 
@@ -17,14 +17,14 @@ Examples
 --------
 Here are some examples of how to use the naive_search function:
 1. Searching for a value in a list:
-lst = [1, 3, 5, 7, 9]
+list = [1, 3, 5, 7, 9]
 target = 5
-index = naive_search(lst, target)
+index = naive_search(list, target)
 print(index) # Output: 2
 2. Searching for a value that is not in the list:
-lst = [1, 3, 5, 7, 9]
+list = [1, 3, 5, 7, 9]
 target = 4
-index = naive_search(lst, target)
+index = naive_search(list, target)
 print(index) # Output: -1
 
 Notes
@@ -47,11 +47,11 @@ In this example, the binary_search function is called with a sorted list of inte
 
 Function Definition
 Here's the definition of the binary_search function:
-def binary_search(arr, target):
+def binary_search(list, target):
     """Searches for a target value in a sorted list using binary search.
 
     Args:
-        arr (list): A sorted list of integers.
+        list (list): A sorted list of integers.
         target (int): The target value to search for in the list.
 
     Returns:
@@ -59,14 +59,14 @@ def binary_search(arr, target):
 
     """
     low = 0
-    high = len(arr) - 1
+    high = len(list) - 1
     
     while low <= high:
         mid = (low + high) // 2
         
-        if arr[mid] == target:
+        if list[mid] == target:
             return mid
-        elif arr[mid] < target:
+        elif list[mid] < target:
             low = mid + 1
         else:
             high = mid - 1
